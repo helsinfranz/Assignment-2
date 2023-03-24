@@ -11,8 +11,9 @@ contract newnone {
             revert("Number should be greater than 5 (Revert)");
         }
     }
-    function Assert(uint num) public view {
+    uint public i=0;
+    function Assert() public view {
         uint balance=address(this).balance;
-        assert(balance >= num);
+        assert(balance == i);
     }
 }
